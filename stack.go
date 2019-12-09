@@ -42,8 +42,10 @@ func (s1 *stack) size()int{
 	return len(s1.elements)
 }
 
+
 func main(){
-	s1 := stack{elements : []int{}}
+	// s1 := stack{elements : []int{}}
+	s1 := new(stack)
 	fmt.Println("Top element of stack:",s1.top())
 	fmt.Println("All elements in stack:",s1.elements)
 	s1.push(10)

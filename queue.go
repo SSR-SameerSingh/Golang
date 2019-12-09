@@ -41,7 +41,8 @@ func (q1 *queue) isEmpty()bool{
 
 
 func main(){
-	q1 := queue{elements:[]int{}}
+	// q1 := queue{elements:[]int{}}
+	q1 := new(queue)
 	q1.enqueue(10)
 	q1.enqueue(11)
 	q1.enqueue(12)
