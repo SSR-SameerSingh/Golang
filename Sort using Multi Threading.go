@@ -4,7 +4,7 @@
 	and then merge the arrays into a single array.
 
 Approach:
-	Comparison based sorting using threads
+	Comparison based sorting using threads.
 */
 
 package main
