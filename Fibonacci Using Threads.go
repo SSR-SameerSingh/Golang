@@ -5,11 +5,11 @@ import (
 )
 
 func main() {
-	limit := 12
+	limit := 12 // number of fibonacci sequences to generate
 	jobs := make(chan int, limit) // jobs is a queue of numbers
 	result := make(chan int, limit)
 
-	go worker(jobs, result)
+	go worker(jobs, result) // activate go workers and see the difference
 	// go worker(jobs, result)
 	// go worker(jobs, result)
 	// go worker(jobs, result)
@@ -27,8 +27,8 @@ func main() {
 
 }
 
-func worker(jobs <-chan int, result chan<- int) {
-	for n := range jobs {
+func worker(jobs <-chan int, result chan<- int) { 
+	for n := range jobs { //job : channel used to receive values, result: used to send values
 		result <- fib(n)
 	}
 }
